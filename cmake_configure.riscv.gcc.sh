@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=/home/apps/cross-compiler/pulpino/bin:${PATH}
+export PATH=/mnt/d/SISLAB/pulpino/ri5cy_gnu_toolchain/install/bin:${PATH}
 
 OBJDUMP=`which riscv32-unknown-elf-objdump`
 OBJCOPY=`which riscv32-unknown-elf-objcopy`
@@ -45,7 +45,7 @@ SIM_DIRECTORY="$PULP_GIT_DIRECTORY/vsim"
 #insert here your post-layout netlist if you are using IMPERIO
 PL_NETLIST=""
 
-cmake "$PULP_GIT_DIRECTORY"/sw/ \
+cmake "$PULP_GIT_DIRECTORY"/pulpino-dev-sw/ \
     -DPULP_MODELSIM_DIRECTORY="$SIM_DIRECTORY" \
     -DCMAKE_C_COMPILER="$COMPILER" \
     -DVSIM="$VSIM" \
